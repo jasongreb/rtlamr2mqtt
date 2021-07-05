@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 '''
-Runs rtlamr to watch for IDM broadcasts from power meter. If meter id
-is in the list, usage is sent to 'readings/{meter id}/meter_reading'
-topic on the MQTT broker specified in settings.
+Runs rtlamr to watch for broadcasts from power meter. If meter ID
+is in the list, usage is sent to 'readings/{msg_type}/{meter id}/meter_reading'
+topic on the MQTT broker specified in settings. It also outputs the meter type
+in 'readings/{msg_type}/{meter id}/meter_type'.
 
 WATCHED_METERS = A Python list indicating those meter IDs to record and post.
 MQTT_HOST = String containing the MQTT server address.
 MQTT_PORT = An int containing the port the MQTT server is active on.
+MSG_TYPES = Comma separated list of the message types passed to rtlamr to scan for.
 
 '''
 import os
