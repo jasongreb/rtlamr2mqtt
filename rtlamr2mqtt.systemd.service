@@ -1,0 +1,14 @@
+[Unit]
+Description=RTL AMR to MQTT
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/rtlamr2mqtt/rtlamr2mqtt.py
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=rtlamr2mqtt
+
+[Install]
+WantedBy=multi-user.target
