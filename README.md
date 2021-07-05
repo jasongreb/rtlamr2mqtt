@@ -1,7 +1,5 @@
 # RTLAMR2MQTT: Send RTL-AMR Meter Data Over MQTT
 
-##### Copyright (c) 2021 Jason Greb. Distributed under MIT License.
-
 Using an [inexpensive rtl-sdr dongle](https://www.amazon.com/s/ref=nb_sb_noss?field-keywords=RTL2832U), it's possible to listen for signals from compatible smart meters using rtlamr. This script runs as a daemon, launches rtl_tcp and rtlamr, and parses the output from rtlamr. If this matches your meter, it will push the data into MQTT for consumption by Home Assistant, OpenHAB, or custom scripts.
 
 ## Requirements
